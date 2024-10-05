@@ -7,4 +7,19 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model Ticket {
+  id         Int       @id @default(autoincrement())
+  clientName String    @map("client_name")
+  status     String
+  createdAt  DateTime  @default(now()) @map("created_at")
+  updatedAt  DateTime  @updatedAt @map("updated_at")
+  messages   Message[]
+}
 
+model Message {
+  id        Int      @id @default(autoincrement())
+  body      String
+  createdAt DateTime @default(now()) @map("created_at")
+  ticketId  Int      @map("ticket_id")
+  ticket    Ticket   @relation(fields: [ticketId], references: [id])
+}

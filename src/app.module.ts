@@ -3,6 +3,7 @@ import { ConfigModule, ConfigModule as ConfigModuleNest } from "@nestjs/config"
 import { envSchema } from './env/env';
 import { EnvModule } from './env/env.module';
 import { PrismaModule } from './shared/database/prisma.module';
+import { TicketModule } from './ticket/ticket.module';
 
 @Module({
   imports: [ConfigModuleNest.forRoot({
@@ -11,7 +12,8 @@ import { PrismaModule } from './shared/database/prisma.module';
   }),
     EnvModule,
   ConfigModule.forRoot({ isGlobal: true }),
-    PrismaModule
+    PrismaModule,
+    TicketModule
   ],
   controllers: [],
   providers: [],
