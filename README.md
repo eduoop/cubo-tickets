@@ -48,6 +48,8 @@ DATABASE_URL="file:./dev.db"
 
 ```
 <npx prisma migrate dev --name "add_initial_tables">
+
+- Se aparecer alguma opção pedindo para resetar o banco, dê um yes(y) e prossiga
 ```
 
 ## ☕ Usando
