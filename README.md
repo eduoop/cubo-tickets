@@ -58,6 +58,12 @@ DATABASE_URL="file:./dev.db"
 Para rodar o projeto, abra um terminal na pasta do projeto e rode-o usando: <yarn start:dev ou npm run start:dev>
 ```
 
+## 💎 Bonus!!
+
+```
+Acesse <http://localhost:3333/api> com a aplicação rodando para ver a documentação completa das rotas
+```
+
 ## Tecnologias Utilizadas
 
 - **Nest.js** (v10)
