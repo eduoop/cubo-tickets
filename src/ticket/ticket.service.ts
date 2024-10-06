@@ -36,7 +36,6 @@ export class TicketService {
   }
 
   async update(id: number, updateTicketDto: UpdateTicketDto) {
-    console.log(id)
     const updatedTicket = await this.prisma.ticket.update({
       where: { id: id },
       data: {
